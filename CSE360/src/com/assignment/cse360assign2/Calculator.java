@@ -17,8 +17,12 @@ package com.assignment.cse360assign2;
  */
 
 public class Calculator {
+
 	private int total;
 
+	/**
+	 * @constructor Creates an instance of the array myArray.
+	 */
 	public Calculator() {
 		total = 0; // not needed - included for clarity
 	}
@@ -26,10 +30,11 @@ public class Calculator {
 	/**
 	 * This method is will return the current Total
 	 * 
-	 * @return int This is the integer which is the current total
+	 * @return total
+	 *              This is the integer which is the current total
 	 */
 	public int getTotal() {
-		return 0;
+		return total;
 	}
 
 	/**
@@ -40,6 +45,9 @@ public class Calculator {
 	 */
 	public void add(int value) {
 
+		total = total + value;
+
+		System.out.println("the value of total after add  is" + total);
 	}
 
 	/**
@@ -50,6 +58,9 @@ public class Calculator {
 	 */
 	public void subtract(int value) {
 
+		total = total - value;
+		System.out.println("the value of total after subtract  is" + total);
+
 	}
 
 	/**
@@ -59,6 +70,8 @@ public class Calculator {
 	 *            This is the integer to be multiplied to the total variable
 	 */
 	public void multiply(int value) {
+		total = total * value;
+		System.out.println("the value of total after multiply  is" + total);
 
 	}
 
@@ -69,7 +82,13 @@ public class Calculator {
 	 *            This is the integer that the total variable is divided by
 	 */
 	public void divide(int value) {
+		if (value == 0) {
+			total = 0;
+		} else {
+			total = total / value;
+		}
 
+		System.out.println("the value of total after multiply  is" + total);
 	}
 
 	/**
