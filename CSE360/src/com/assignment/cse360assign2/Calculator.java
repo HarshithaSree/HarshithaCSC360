@@ -5,11 +5,15 @@
 //Description : The Calculator class provides methods to perform basic arithmetic operations 
 // and also stores the history of those operations performed.
 //
+//https://github.com/HarshithaSree/HarshithaCSC360
+//
 package com.assignment.cse360assign2;
 
 /**
  * The Calculator class provides methods to perform basic arithmetic operations
  * and also stores the history of those operations performed.
+ *
+ *https://github.com/HarshithaSree/HarshithaCSC360
  *
  * @author Harshitha Kalidindi
  * @version 1.0
@@ -19,12 +23,13 @@ package com.assignment.cse360assign2;
 public class Calculator {
 
 	private int total;
-
+    private String history;
 	/**
-	 * @constructor Creates an instance of the array myArray.
+	 * @constructor initializes the variables total and history.
 	 */
 	public Calculator() {
 		total = 0; // not needed - included for clarity
+		history = "0";
 	}
 
 	/**
@@ -46,7 +51,7 @@ public class Calculator {
 	public void add(int value) {
 
 		total = total + value;
-
+        history = history+" + "+value;
 		System.out.println("the value of total after add  is" + total);
 	}
 
@@ -59,6 +64,7 @@ public class Calculator {
 	public void subtract(int value) {
 
 		total = total - value;
+		history = history+" - "+value;
 		System.out.println("the value of total after subtract  is" + total);
 
 	}
@@ -71,6 +77,7 @@ public class Calculator {
 	 */
 	public void multiply(int value) {
 		total = total * value;
+		 history = history+" * "+value;
 		System.out.println("the value of total after multiply  is" + total);
 
 	}
@@ -83,8 +90,10 @@ public class Calculator {
 	 */
 	public void divide(int value) {
 		if (value == 0) {
+			 history = history+" / "+value;
 			total = 0;
 		} else {
+			 history = history+" / "+value;
 			total = total / value;
 		}
 
@@ -98,7 +107,7 @@ public class Calculator {
 	 *         operations performed on the total variable
 	 */
 	public String getHistory() {
-		return "";
+		return history;
 	}
 
 }
