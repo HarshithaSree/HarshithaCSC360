@@ -13,7 +13,7 @@ package com.assignment.cse360assign2;
  * The Calculator class provides methods to perform basic arithmetic operations
  * and also stores the history of those operations performed.
  *
- *https://github.com/HarshithaSree/HarshithaCSC360
+ * https://github.com/HarshithaSree/HarshithaCSC360
  *
  * @author Harshitha Kalidindi
  * @version 1.0
@@ -23,7 +23,8 @@ package com.assignment.cse360assign2;
 public class Calculator {
 
 	private int total;
-    private String history;
+	private String history;
+
 	/**
 	 * @constructor initializes the variables total and history.
 	 */
@@ -35,8 +36,7 @@ public class Calculator {
 	/**
 	 * This method is will return the current Total
 	 * 
-	 * @return total
-	 *              This is the integer which is the current total
+	 * @return total This is the integer which is the current total
 	 */
 	public int getTotal() {
 		return total;
@@ -51,8 +51,8 @@ public class Calculator {
 	public void add(int value) {
 
 		total = total + value;
-        history = history+" + "+value;
-		System.out.println("the value of total after add  is" + total);
+		history = history + " + " + value;
+
 	}
 
 	/**
@@ -64,8 +64,7 @@ public class Calculator {
 	public void subtract(int value) {
 
 		total = total - value;
-		history = history+" - "+value;
-		System.out.println("the value of total after subtract  is" + total);
+		history = history + " - " + value;
 
 	}
 
@@ -77,8 +76,7 @@ public class Calculator {
 	 */
 	public void multiply(int value) {
 		total = total * value;
-		 history = history+" * "+value;
-		System.out.println("the value of total after multiply  is" + total);
+		history = history + " * " + value;
 
 	}
 
@@ -90,14 +88,13 @@ public class Calculator {
 	 */
 	public void divide(int value) {
 		if (value == 0) {
-			 history = history+" / "+value;
+			history = history + " / " + value;
 			total = 0;
 		} else {
-			 history = history+" / "+value;
+			history = history + " / " + value;
 			total = total / value;
 		}
 
-		System.out.println("the value of total after multiply  is" + total);
 	}
 
 	/**
